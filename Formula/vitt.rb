@@ -5,7 +5,7 @@ class Vitt < Formula
   url "https://repo1.maven.org/maven2/org/monarchinitiative/vitt/vitt-cli/#{version}/vitt-cli-#{version}.jar"
   sha256 "ee25886bc831b79d1b30922aaf41fbcda911ef7d712b10f892e37fca5f8a5fbd" # Get with: shasum -a 256 vitt-cli-#{version}.jar
 
-  depends_on "openjdk"
+  depends_on "openjdk@21"
 
   def install
     libexec.install "vitt-cli-#{version}.jar"
