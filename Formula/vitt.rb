@@ -1,15 +1,15 @@
 class Vitt < Formula
   desc "A moderately small and fast variant annotation utility"
   homepage "https://github.com/exomiser/vitt"
-  url "https://github.com/exomiser/vitt/releases/download/v0.1.0/vitt-cli-0.1.0.jar"
-  sha256 "a53f376574c12a676e890c6b3f1d270cb7b97146e2fcbf73fe3fbc5d033338a4" # Get with: shasum -a 256 vitt-cli-0.1.0.jar
   version "0.1.0"
+  url "https://repo1.maven.org/maven2/org/monarchinitiative/vitt/vitt-cli/#{version}/vitt-cli-#{version}.jar"
+  sha256 "ee25886bc831b79d1b30922aaf41fbcda911ef7d712b10f892e37fca5f8a5fbd" # Get with: shasum -a 256 vitt-cli-#{version}.jar
 
   depends_on "openjdk"
 
   def install
-    libexec.install "vitt-cli-0.1.0.jar"
-    bin.write_jar_script libexec/"vitt-cli-0.1.0.jar", "vitt"
+    libexec.install "vitt-cli-#{version}.jar"
+    bin.write_jar_script libexec/"vitt-cli-#{version}.jar", "vitt"
   end
 
   test do
